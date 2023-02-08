@@ -42,9 +42,10 @@ public class workhours_calculator {
 
                 }
             } 
-            fr.close();
+            
             br.close();
-        } catch(IOException e) {
+        } 
+        catch(IOException e) {
 
         }
     }
