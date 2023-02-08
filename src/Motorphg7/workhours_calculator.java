@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class workhours_calculator {
@@ -30,7 +31,7 @@ public class workhours_calculator {
         sc.close();
 
         try {
-            File f = new File("motorphg7\\attendance.txt");
+            File f = new File("attendance.txt");
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
             String line = "";
@@ -40,7 +41,9 @@ public class workhours_calculator {
                 if (einfo[0].equals(id)) {
 
                 }
-            }
+            } 
+            fr.close();
+            br.close();
         } catch(IOException e) {
 
         }
