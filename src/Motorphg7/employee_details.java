@@ -9,7 +9,7 @@ public class employee_details {
 
     public static void employeeDetails(String id) {
         try {
-            File f = new File("motorphg7\\employeedetails.txt");
+            File f = new File("employeedetails.txt");
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
             String line = "";
