@@ -9,6 +9,7 @@ public class employee_details {
 
     public static void employeeDetails(String id) {
         try {
+            boolean found = false;
             File f = new File("employeedetails.txt");
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
@@ -16,6 +17,7 @@ public class employee_details {
             while ((line = br.readLine()) != null) {
                 String[] einfo = line.split("\t");
                 if (einfo[0].equals(id)) {
+                    found = true;
                     String empName = (einfo[2] + " " + einfo[1]);
                     String empBdate = einfo[3];
                     String empAddress = einfo[4];
@@ -51,9 +53,14 @@ public class employee_details {
                     System.out.println("Clothing Allowance: " + empClothing);
                     System.out.println("Gross Semi-monthly Rate: " + empSemi);
                     System.out.println("Hourly Rate: " + empRate);
-                    break;
-                }
-            } 
+                } /* else {
+                    System.out.println("Invalid Employee ID, please try again.");
+                    employee_search.employeeSearch();
+                }  */
+            } if (!found) {
+                System.out.println("Invalid Employee ID, please try again.");
+                employee_search.employeeSearch();
+            }
             br.close();
         } catch(IOException e) {
 
