@@ -38,6 +38,7 @@ public class workhours_calculator {
             ArrayList<String> workweek = new ArrayList<String>();
             while ((line = br.readLine()) != null) {
                 String[] einfo = line.split("\t");
+                String id = ""; 
                 if (einfo[0].equals(id)) {
 
                 }
