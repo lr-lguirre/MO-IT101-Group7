@@ -58,6 +58,7 @@ public class employee_details {
         } catch(IOException e) {
 
         }
+        hr_portal.hrPortal();
     }
     
 }
