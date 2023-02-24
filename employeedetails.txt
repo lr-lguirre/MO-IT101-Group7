@@ -1,4 +1,3 @@
-Employee #	Last Name	First Name	Birthday	Address	Phone Number	SSS #	Philhealth #	TIN #	Pag-ibig #	Status	Position	Immediate Supervisor	Basic Salary	Rice Subsidy	Phone Allowance	Clothing Allowance	Gross Semi-monthly Rate	Hourly Rate
 10001	Crisostomo	Jose	February 14 1988	17/85 Stracke Via Suite 042 Poblacion Las Piñas 4783 Dinagat Islands	918-621-603	49-1632020-8	382189453145	317-674-022-000	441093369646	Regular	HR Manager	N/A	62,670	1,500	1,000	1,000	31,335	373.04
 10002	Mata	Christian	October 21 1987	90 O'Keefe Spur Apt. 379 Catigbian 2772 Sulu	783-776-744	49-2959312-6	824187961962	103-100-522-000	631052853464	Regular	Account Team Leader	Romualdez Fredrick	42,975	1,500	800	800	21,488	255.8
 10003	San Jose	Brad	March 15 1996	99 Strosin Hills Poblacion Bislig 5340 Tawi-Tawi	797-009-261	40-2400714-1	239192926939	672-474-690-000	210850209964	Regular	HR Team Leader	Crisostomo Jose	42,975	1,500	800	800	21,488	255.8

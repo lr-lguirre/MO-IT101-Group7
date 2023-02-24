@@ -4,19 +4,21 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
 
 public class employee_details {
-
-    public static void employeeDetails(String id) {
-        try {
-            boolean found = false;
+    
+    public static boolean employeeDetails(String id) throws NumberFormatException, ParseException, IOException {
+            int ID = Integer.valueOf(id);
             File f = new File("employeedetails.txt");
             FileReader fr = new FileReader(f);
-            BufferedReader br = new BufferedReader(fr);
+        try (BufferedReader br = new BufferedReader(fr)) {
+            boolean found = false;
             String line = "";
             while ((line = br.readLine()) != null) {
                 String[] einfo = line.split("\t");
-                if (einfo[0].equals(id)) {
+                int empid = Integer.valueOf(einfo[0]);
+                if (empid == ID) {
                     found = true;
                     String empName = (einfo[2] + " " + einfo[1]);
                     String empBdate = einfo[3];
@@ -53,19 +55,15 @@ public class employee_details {
                     System.out.println("Clothing Allowance: " + empClothing);
                     System.out.println("Gross Semi-monthly Rate: " + empSemi);
                     System.out.println("Hourly Rate: " + empRate);
-                } /* else {
-                    System.out.println("Invalid Employee ID, please try again.");
-                    employee_search.employeeSearch();
-                }  */
-            } if (!found) {
-                System.out.println("Invalid Employee ID, please try again.");
-                employee_search.employeeSearch();
+                }
+                if (found) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
-            br.close();
-        } catch(IOException e) {
-
         }
-        hr_portal.hrPortal();
+        return false; 
     }
     
 }
