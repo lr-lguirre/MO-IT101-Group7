@@ -7,7 +7,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
-import java.util.Set;
 
 public class workweek_calculator {
     public static void entry() throws ParseException, NumberFormatException, IOException {
@@ -37,12 +36,15 @@ public class workweek_calculator {
     }
 
     public static int weekCalc(String date ) throws ParseException {
-        String format = "dd/MM/yyyy";
-        SimpleDateFormat df = new SimpleDateFormat(format);
-        Date dt = df.parse(date);
+        String[] arrOfDate = date.split("/");
+        int month = Integer.valueOf(arrOfDate[0]);
+        int day = Integer.valueOf(arrOfDate[1]);
+        int year = Integer.valueOf(arrOfDate[2]);
         Calendar cal = Calendar.getInstance();
-        cal.setTime(dt);
+        cal.clear();
+        cal.set(year, month, day);
         int weekNo = cal.get(Calendar.WEEK_OF_YEAR);
+        // System.out.println("Week "+weekNo+" Date "+day+"/"+month+"/"+year);
         return weekNo;
     }
 }
