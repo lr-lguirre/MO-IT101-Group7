@@ -34,7 +34,7 @@ public class authentication {
     }
     public static boolean validaLogin(String user, String pass, String file) {
         boolean sucess = false;
-        Map<String, String> mapUser = new HashMap();
+        Map<String, String> mapUser = new HashMap<String,String>();
         getLines(file).forEach(l -> {
             String[] strs = l.split(",");
            // System.out.println(mapUser);
@@ -47,7 +47,7 @@ public class authentication {
     }
 
     public static String validAccess(String user, String pass, String file) {
-        Map<String, String> mapUser = new HashMap();
+        Map<String, String> mapUser = new HashMap<String, String>();
         getLines(file).forEach(l -> {
             String[] strs = l.split(",");
             //System.out.println(mapUser);
@@ -62,7 +62,7 @@ public class authentication {
     }
     
     public static List<String> getLines(String path) {
-        List<String> lines = new ArrayList();
+        List<String> lines = new ArrayList<String>();
         try {
             lines = Files.readAllLines(new File(path).toPath());
         } catch (Exception ex) {
