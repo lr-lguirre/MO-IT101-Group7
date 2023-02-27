@@ -6,6 +6,9 @@
 		}
 	],
 	"settings": {
-		"git.autofetch": "all"
+		"git.autofetch": "all",
+		"java.project.sourcePaths": [
+			"src"
+		]
 	}
 }
